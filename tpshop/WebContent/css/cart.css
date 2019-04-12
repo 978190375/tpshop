@@ -1,0 +1,17 @@
+@charset "UTF-8";
+*{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.cart_main{
+	position:relative;
+	margin-left:50%;
+	left:-550px;
+}
+
+.cart_show{
+	position: relative;
+	width: 1100px;
+	min-width:1100px;
+}

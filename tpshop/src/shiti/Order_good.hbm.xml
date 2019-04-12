@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="shiti">
+	<class name="shiti.Order_good" table="order_good">
+		<id name="id" column="id" type="int">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="order"
+			column="order_id"
+			class="shiti.Order"
+			cascade="all"
+		></many-to-one>
+		<many-to-one name="good"
+			column="good_id"
+			class="shiti.Good"
+			cascade="all"			
+			lazy="false" fetch="join" 
+		></many-to-one>
+		
+        <set name="cdkeys" cascade="all" inverse="true" lazy="false">
+			<key column="order_good_id" />
+			<one-to-many class="shiti.Cdkey" />
+
+		</set>
+		
+		
+	</class>
+
+
+</hibernate-mapping>

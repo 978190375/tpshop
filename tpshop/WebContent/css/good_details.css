@@ -1,0 +1,17 @@
+@charset "UTF-8";
+*{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.good_main{
+	position:relative;
+	margin-left:50%;
+	left:-550px;
+}
+
+.good_show{
+	position: relative;
+	width: 1100px;
+	min-width:1100px;
+}

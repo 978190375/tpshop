@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.main{
+	position:relative;
+	margin-left:50%;
+	left:-550px;
+}
+.show{
+	position: relative;
+	width: 1100px;
+	min-width:1100px;
+}
+.show tr{
+	width:1100px;
+}
+
+.show td{
+	float:left;
+	padding: 9px;
+	width: 255px;
+	height: 350px;
+}
+.good_image{
+	width:255px;
+	height:255px;
+	
+}
+.good_image img{
+	width:255px;
+	height:255px;
+}
+.good_name{
+	margin:5px 0px 5px 0px;
+	width:255px;
+	height:40px;
+	overflow:hidden;
+}
+.good_name p{
+	
+	text-align:left;
+	font-sixe:15px;
+}
+.good_name a{
+	
+    text-decoration: none;
+}
+.good_name a:link {
+    color:#000000;
+    text-decoration: none;
+}
+.good_name a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+.good_name a:hover {
+    text-decoration: underline;
+}
+.good_name a:active {
+    text-decoration: none;
+    color: #000000;
+}
+.good_price{
+	margin:5px 0px 5px 0px;
+	width:255px;
+	text-align:left;
+	color:red;
+}

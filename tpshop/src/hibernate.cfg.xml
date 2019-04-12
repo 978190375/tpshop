@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration
+ PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/tpshop?useUnicode=true&amp;characterEncoding=UTF8&amp;serverTimezone=GMT&amp;autoReconnect=true</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+		<property name="connection.autoReconnect">true</property>
+		<property name="connection.autoReconnectForPools">true</property> 
+		<property name="connection.is-connection-validation-required">true</property> 
+		<property name="show_sql">true</property>
+		
+		<mapping resource="shiti/User.hbm.xml" />
+		<mapping resource="shiti/Order.hbm.xml" />
+		<mapping resource="shiti/Cart.hbm.xml" />
+		<mapping resource="shiti/Cdkey.hbm.xml" />
+		<mapping resource="shiti/Good.hbm.xml" />
+		<mapping resource="shiti/Order_good.hbm.xml" />
+		<mapping resource="shiti/Image.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
+
+

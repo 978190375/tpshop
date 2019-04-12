@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="shiti">
+	<class name="shiti.Cdkey" table="cdkey" dynamic-insert="true">
+		<id name="id" column="id" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="cdkey" column="cdkey" type="string"
+			not-null="true" />
+		<property name="state" column="state" type="int"
+			not-null="true" />
+		<property name="add_time" column="add_time" type="date"
+			not-null="false" />
+		<property name="used_time" column="used_time" type="date"
+			not-null="false" />
+		<many-to-one name="order_good"
+			column="order_good_id"
+			class="shiti.Order_good"	
+			
+			cascade="all"	
+			not-null="false"
+		></many-to-one>
+		<many-to-one name="good"
+			column="good_id"
+			class="shiti.Good"
+			cascade="all"	
+		></many-to-one>
+	</class>
+
+
+</hibernate-mapping>

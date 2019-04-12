@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0px;
+	margin: 0px;
+}
+.login_m{
+	
+	position:relative;
+	margin-left:50%;
+	left:-550px;
+}
+.login_s{
+	position: relative;
+	width: 1100px;
+	min-width: 1100px; text-align : center;
+	background-color: rgba(255,255,255,1);
+	border:1px;
+	text-align: center;
+}

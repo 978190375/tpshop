@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="shiti">
+	<class name="shiti.Good" table="good" dynamic-insert="true">
+		<id name="id" column="id" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="name" type="string"
+			not-null="true" />
+			
+		<property name="image_path" column="image_path" type="string"
+			not-null="false" />
+			
+		<property name="edition" column="edition" type="int"
+			not-null="true" />
+			
+		<property name="good_price" column="good_price" type="double"
+			not-null="true" />
+			
+		<property name="price" column="price" type="double"
+			not-null="true" />
+		<property name="count" column="count" type="int"
+			not-null="true" />
+			
+		<property name="ucount" column="ucount" type="int"
+			not-null="true" />
+		<property name="discription" column="discription" type="string"
+			not-null="true" />
+		<property name="tips" column="tips" type="string"
+			not-null="true" />
+		<property name="platform" column="platform" type="int"
+			not-null="true" />
+		<property name="region" column="region" type="int"
+			not-null="true" />
+		<property name="language" column="language" type="string"
+			not-null="true" />
+		<property name="product_time" column="product_time" type="date"
+			not-null="true" />
+		<property name="used_time" column="used_time" type="date"
+			/>
+		
+		
+		<set name="cdkeys" cascade="all" inverse="true" lazy="true">
+			<key column="good_id" />
+			<one-to-many class="shiti.Cdkey" />
+
+		</set>
+	</class>
+
+
+</hibernate-mapping>
